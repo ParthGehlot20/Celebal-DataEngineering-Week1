@@ -1,23 +1,23 @@
-E-Commerce Data Cleaning Pipeline
+E-Commerce Data Clean Up Process
 
-Objective: Build a robust Python ETL pipeline to transform a messy, 24-column e-commerce dataset into a clean, structured 6-column format for downstream BI analytics.
+Goal: Build an Extraction, Transformation, Load (ETL) pipeline in Python that will take an unstructured data set of 24 columns from an E-Commerce website and turn it into a cleanly structured, analytic-ready data set of 6 columns.
 
-Tech Stack
+Technologies Used
 
-Python | Pandas | Jupyter Notebook
+Python | Pandas Library | Jupyter Notebook
 
-Key Transformations
+Major Transformations
 
-    Strategic Slicing: Isolated core analytical features (product_id, title, final_price, rating) before dropping nulls to achieve a 0% data loss rate.
+        1.Strategic Slicing: Isolated the most substantive data points for analysis (product_id, title, final_price and rating) prior to removing null values to ensure a 0% loss of data.
 
-    String Sanitization: Cleaned messy final_price strings by stripping currency symbols (₹), commas, and quotes, safely casting them to floats.
+        2.String Sanitization: Removed multiple characters (₹, commas, and '' quotes) from the final_price column to prepare the data for use as numerical values, then converted to float data type.
 
-    Feature Engineering: Injected a baseline quantity vector and calculated total_amount = final_price * quantity.
+        3.Feature Engineering: Added a baseline quantity column and calculated total_value = final_price * quantity.
 
-    Deduplication: Executed an identity check, confirming 100% uniqueness across the final 1,000 product rows.
+        4.Deduplication: Performed an identity check to confirm uniqueness of the final 1,000 product rows - that there are no duplicates.
 
-Project Deliverables
+Project Outputs
 
-    Week1_Assignment.ipynb: The complete ETL codebase.
+        Week1_Assignment.ipynb: The complete ETL pipeline codebase. 
 
-    cleaned_shopping_dataset.csv: The optimized, analysis-ready dataset.Commerce Data Exploration and Cleaning with Pandas
+        cleaned_shopping_dataset.csv: The final data set that is ready for analysis.
